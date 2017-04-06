@@ -94,6 +94,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    var nexTrainFormat = moment(nextTrain).format("hh:mm");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
     // // Getting an array of each key In the snapshot object
@@ -118,7 +119,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     $("#train-time").html(newTrain.firstTrainTime);
     $("#train-frequency").html(newTrain.frequency);
     $("#next-train").html(tMinutesTillTrain);
-    $("#minutes-away").html(nextTrain);
+    $("#minutes-away").html(nextTrainFormat);
 
     // Handle the errors
 }, function(errorObject) {
