@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Train Times</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- LINK TO FIREBASE GOES HERE -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+  <!-- Added Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+ <div class = "container">
+
+    <div class = "row">
+
+      <div class = "jumbotron"> <h1 class = "text-center">Employee Time Tracker</h1> </div>
+
+        <div class="panel panel-default">
+
+          <div class="panel-heading">
+
+         <!--information for the current employee goes here-->
+
+            <h3 class="panel-title">Current Employees</h3>
+
+        </div>
+
+         <div class="panel-body">
+
+              <table class="table">
+                     <tr>
+
+                        <th>Destination</th>
+                        <th>First Train Time</th>
+                        <th>Frequency</th>
+                        <th>Next Train</th>
+                        <th>Minutes Away</th>
+                        <th></th>
+
+                     </tr>
+                     <tr>
+                        <td><span id = "train-destination"></span></td>
+                        <td><span id = "train-time"></span></td>
+                        <td><span id = "train-frequency"></span></td>
+                        <td><span id = "next-train"></span></td>
+                        <td><span id = "minutes-away"></span></td>
+                     </tr>
+
+              </table>
+          </div>
+
+       </div>
+
+  </div>
+
+    <div class = "row">
+
+      <div class="panel panel-default">
+
+          <div class="panel-heading">
+
+         <!--add input fields here-->
+
+            <h3 class="panel-title">Add a Train</h3>
+
+        </div>
+
+         <div class="panel-body">
+
+         <form>
+           <div class="form-group">
+              <label for="inputname">Destination</label>
+                <input type="text" class="form-control" id="desInput" placeholder="Destination">
+           </div>
+           <div class="form-group">
+              <label for="exampleInputPassword1">First Train</label>
+              <input type="text" class="form-control" id="firstInput" placeholder="First Train">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword1">Frequency</label>
+              <input type="text" class="form-control" id="freqInput" placeholder="Frequency">
+          </div>
+          </div>
+          <button type="text" class="btn btn-default" id = "add-train">Submit</button>
+        </form>
+
+
+         </div>
+    </div>
+
+    </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Script -->
+  <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
