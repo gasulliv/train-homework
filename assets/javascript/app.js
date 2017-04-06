@@ -107,38 +107,8 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     // Increase n to repeat above steps for next child
     n++;
 
-
-    // // Getting an array of each key In the snapshot object
-    // var svArr = Object.keys(sv);
-
-    // // Finding the last user's key
-    // var lastIndex = svArr.length - 1;
-
-    // var lastKey = svArr[lastIndex];
-
-    // // Using the last user's key to access the last added user object
-    // var lastObj = sv[lastKey];
-
-    // // Console.loging the last user's data
-    // console.log(lastObj.name);
-    // console.log(lastObj.email);
-    // console.log(lastObj.age);
-    // console.log(lastObj.comment);
-
-    // // Change the HTML to reflect
-    // $("#train-destination").html(childSnapshot.destination);
-    // $("#train-time").html(childSnapshot.firstTrainTime);
-    // $("#train-frequency").html(childSnapshot.frequency);
-    // $("#next-train").html(childSnapshot.nextTrainFormatted);
-    // $("#minutes-away").html(childSnapshot.MinutesTillTrain);
-
     // Handle the errors
 }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });
 
-// $("body").on("click", ".remove-train", function(){
-//                $(this).closest ('tr').remove();
-//                getKey = $(this).parent().parent().attr('id');
-//                dataRef.child(getKey).remove();
-//           });
