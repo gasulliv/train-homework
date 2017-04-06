@@ -13,6 +13,10 @@ firebase.initializeApp(config);
 // This variable references the database
 var database = firebase.database();
 
+//setting the html variable n
+
+ var n = 0;
+
 //captures the button click
 $("#add-train").on("click", function(event) {
     //this line preventst the default refresh
@@ -86,6 +90,24 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     console.log(tNext);
 
 
+    $("table tbody").append("<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
+
+    // Add values to corresponding column
+    var rowTds = $("table")
+        .children()
+        .eq(1)
+        .children("tr")
+        .eq(n)
+        .children("td");
+    var headings = [childSnapshot.val().destination, childSnapshot.val().firstTrainTime, childSnapshot.val().frequency, childSnapshot.val().nextTrainFormatted, childSnapshot.val().MinutesTillTrain];
+    for (var i = 0; i < headings.length; i++) {
+        rowTds.eq(i).text(headings[i]);
+    }
+
+    // Increase n to repeat above steps for next child
+    n++;
+
+
     // // Getting an array of each key In the snapshot object
     // var svArr = Object.keys(sv);
 
@@ -103,12 +125,12 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     // console.log(lastObj.age);
     // console.log(lastObj.comment);
 
-    // Change the HTML to reflect
-    $("#train-destination").html(childSnapshot.destination);
-    $("#train-time").html(childSnapshot.firstTrainTime);
-    $("#train-frequency").html(childSnapshot.frequency);
-    $("#next-train").html(childSnapshot.nextTrainFormatted);
-    $("#minutes-away").html(childSnapshot.MinutesTillTrain);
+    // // Change the HTML to reflect
+    // $("#train-destination").html(childSnapshot.destination);
+    // $("#train-time").html(childSnapshot.firstTrainTime);
+    // $("#train-frequency").html(childSnapshot.frequency);
+    // $("#next-train").html(childSnapshot.nextTrainFormatted);
+    // $("#minutes-away").html(childSnapshot.MinutesTillTrain);
 
     // Handle the errors
 }, function(errorObject) {

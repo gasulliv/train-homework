@@ -10,6 +10,9 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+  <!--css-->
+  <link rel = "stylesheet" href="assets/css/style.css">
+
   <!-- LINK TO FIREBASE GOES HERE -->
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
@@ -24,7 +27,7 @@
 
     <div class = "row">
 
-      <div class = "jumbotron"> <h1 class = "text-center">Employee Time Tracker</h1> </div>
+      <div class = "jumbotron"> <img class = "ticket" src="assets/images/Ticket-Front.png"> </div>
 
         <div class="panel panel-default">
 
@@ -39,6 +42,7 @@
          <div class="panel-body">
 
               <table class="table">
+                  <thead>
                      <tr>
 
                         <th>Destination</th>
@@ -49,14 +53,8 @@
                         <th></th>
 
                      </tr>
-                     <tr>
-                        <td><span id = "train-destination"></span></td>
-                        <td><span id = "train-time"></span></td>
-                        <td><span id = "train-frequency"></span></td>
-                        <td><span id = "next-train"></span></td>
-                        <td><span id = "minutes-away"></span></td>
-                     </tr>
-
+                    </thead>
+                     <tbody></tbody>
               </table>
           </div>
 
