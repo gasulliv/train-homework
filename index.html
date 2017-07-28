@@ -6,12 +6,16 @@
 
   <meta charset="UTF-8">
   <title>Train Times</title>
-
+  <!--google fonts-->
+   <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!--font awesome-->
+  <script src="https://use.fontawesome.com/07cef29b71.js"></script>
 
   <!--css-->
   <link rel = "stylesheet" href="assets/css/style.css">
+
 
   <!-- LINK TO FIREBASE GOES HERE -->
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
@@ -27,78 +31,83 @@
 
     <div class = "row">
 
-      <div class = "jumbotron"> <img class = "ticket" src="assets/images/Ticket-Front.png"> </div>
-
-        <div class="panel panel-default">
-
-          <div class="panel-heading">
-
-         <!--information for the current employee goes here-->
-
-            <h3 class="panel-title">Current Employees</h3>
-
+      <div class = "jumbotron text-center">
+        <div class = "row">
+          <div class = "col-md-8 col-sm-8 col-lg-offset-2">
+            <i class="fa fa-snowflake-o" aria-hidden="true"></i><img class = "ticket" src="assets/images/dbhead.svg"><i class="fa fa-snowflake-o" aria-hidden="true"></i> </div>
         </div>
+        <div class = "row">
+          <div class = "col-md-8 col-sm-8 col-lg-offset-2 text-center">
+            <h2>Donner & Blitzen</h2><h4> Railroad Co.</h4 >
+          </div>
+        </div>
+      </div>
 
+      <div class = "container-fluid">
+        <div class = "row">
+          <div class = "col-md-12 col-sm-12">
+            <div class="panel">
+              <div class="panel-heading">
+         <!--information for the current train goes here-->
+                <h3 class="panel-title red">Current Trains</h3>
+              </div>
          <div class="panel-body">
-
-              <table class="table">
+              <table class="table" id = "train-table">
                   <thead>
                      <tr>
-
-                        <th>Destination</th>
-                        <th>First Train Time</th>
-                        <th>Frequency</th>
-                        <th>Next Train</th>
-                        <th>Minutes Away</th>
-                        <th></th>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
 
                      </tr>
-                    </thead>
-                     <tbody></tbody>
+                  </thead>
+                 <tbody></tbody>
               </table>
           </div>
 
        </div>
-
   </div>
+</div>
+</div>
+<div class = "container-fluid">
+ <div class = "row">
+ <div class = "col-md-12 col-sm-12">
+      <div class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title red"><strong>Add Train</strong></h3>
+            </div>
+            <div class="panel-body">
 
-    <div class = "row">
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group">
+                  <label for="train-name-input">Train Name</label>
+                  <input type="text" class="form-control" id="train-name-input">
+                </div>
+                <div class="form-group">
+                  <label for="destination-input">Destination</label>
+                  <input type="text" class="form-control" id="destination-input">
+                </div>
+                <div class="form-group">
+                  <label for="first-train-input">First Train Time</label>
+                  <input type="text" class="form-control" id="first-train-input">
+                </div>
+                <div class="form-group">
+                  <label for="frequency-input">Frequency (min)</label>
+                  <input type="text" class="form-control" id="frequency-input">
+                </div>
+                <button type="submit" class="btn" id="add-train-btn">Submit</button>
+              </form>
 
-      <div class="panel panel-default">
+            </div>
 
-          <div class="panel-heading">
-
-         <!--add input fields here-->
-
-            <h3 class="panel-title">Add a Train</h3>
-
-        </div>
-
-         <div class="panel-body">
-
-         <form>
-           <div class="form-group">
-              <label for="inputname">Destination</label>
-                <input type="text" class="form-control" id="desInput" placeholder="Destination">
-           </div>
-           <div class="form-group">
-              <label for="exampleInputPassword1">First Train</label>
-              <input type="text" class="form-control" id="firstInput" placeholder="First Train">
           </div>
-          <div class="form-group">
-              <label for="exampleInputPassword1">Frequency</label>
-              <input type="text" class="form-control" id="freqInput" placeholder="Frequency">
-          </div>
-          </div>
-          <button type="text" class="btn btn-default" id = "add-train">Submit</button>
-        </form>
 
-
-         </div>
     </div>
-
-    </div>
-
+  </div>
+</div>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
 

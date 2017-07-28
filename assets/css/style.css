@@ -1,18 +1,71 @@
 body {
 	background-color: #360000;
+	color:white;
 }
-.container {
+
+h2, h4 {
+	color:#FDCC05;
+	margin-top: -10px;
+	font-family: 'Bellefair', serif;
+}
+ h3 {
+ 	margin-top: -10px;
+	font-family: 'Bellefair', serif;
+	color:white;
+ }
+p {
+	background-color: #360000;
+	color:white;
+}
+
+.container-fluid, .container {
 	background-color: #360000;
 }
 
 .jumbotron {
 	background-color:transparent;
-	width:1050px;
-	height:455px;
+	width:100%;
 	padding:none;
 }
 
 .ticket {
-	width:1000px;
-	height:405px;
+	width:300px;
+	height:305px;
+	margin-left: -20px;
+}
+
+.fa-snowflake-o {
+	color:#FDCC05;
+}
+
+.btn {
+	margin-left:45%;
+}
+
+.panel-heading {
+	background-color: #FDCC05;
+}
+
+.panel {
+	border-color:#FDCC05;
+	background-color: #360000;
+}
+
+.panel-body {
+	background-color: #360000;
+}
+
+th, label, .panel-title {
+	color:#FDCC05;
+	font-family: 'Bellefair', serif;
+}
+
+.red {
+	color:#360000;
+}
+
+#add-train-btn {
+	color:white;
+	background-color: #FDCC05;
+	font-family: 'Bellefair', serif;
 }
