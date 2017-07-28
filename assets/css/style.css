@@ -8,11 +8,17 @@ h2, h4 {
 	margin-top: -10px;
 	font-family: 'Bellefair', serif;
 }
+
  h3 {
  	margin-top: -10px;
 	font-family: 'Bellefair', serif;
 	color:white;
  }
+
+h4 {
+	font-size: 20px;
+}
+
 p {
 	background-color: #360000;
 	color:white;
