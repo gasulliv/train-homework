@@ -69,3 +69,20 @@ th, label, .panel-title {
 	background-color: #FDCC05;
 	font-family: 'Bellefair', serif;
 }
+
+.train {
+	margin-top: 150px;
+	width:10%;
+	margin-left: -20px;
+}
+
+.fliptrain {
+		-moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+        margin-right:-20px;
+
+}
